@@ -1,9 +1,12 @@
 <?php
-    $firstName = 'Георгий';
-    $profession = 'Бухгалтер';
-    $city = 'Москва';
-    $email = 'fadeev@start2play.ru';
-    $phone = '+7999999999999';
+    $firstName = 'Andrei';
+    $profession = 'kinda doctor';
+    $city = 'S-Petersburg';
+    $email = 'a.s.jernakov@*****';
+    $phone = '+79990000000';
+    $age = 2022-1983;
+    $ageinDays = $age*365;
+
 
 ?>
 
@@ -46,7 +49,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: 'Jost', sans-serif;}
                'profession' => $profession,
                'city' => $city,
                'email' => $email,
-               'phone' => $phone
+               'phone' => $phone,
+               'age' => $age
            ] ;
 
 
@@ -54,7 +58,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: 'Jost', sans-serif;}
                'profession' => 'briefcase',
                'city' => 'home',
                'email' => 'envelope',
-               'phone' => 'phone'
+               'phone' => 'phone',
+               'age' => 'hourglass-half'
            ];
 
            foreach ($values as $key => $value):
@@ -63,25 +68,32 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: 'Jost', sans-serif;}
            <?php endforeach;?>
 
           <hr>
+            <?php
+
+            $skills = [
+                'skill_name' => ['Adobe Photoshop', 'Photography', 'Illustrator', 'Copywriting'],
+                'level' => [97, 83, 70 ,80]
+            ]
+            ?>
 
           <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Навыки</b></p>
-          <p>Adobe Photoshop</p>
+          <p><?=$skills['skill_name'][0]?></p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="..."><?=$skills['level'][0]?>%</div>
           </div>
-          <p>Photography</p>
+          <p><?=$skills['skill_name'][1]?></p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
-              <div class="w3-center w3-text-white">80%</div>
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="...">
+              <div class="w3-center w3-text-white"><?=$skills['level'][1]?>%</div>
             </div>
           </div>
-          <p>Illustrator</p>
+          <p><?=$skills['skill_name'][2]?></p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+          <div class="w3-container w3-center w3-round-xlarge w3-teal" style="..."><?=$skills['level'][2]?>%</div>
           </div>
-          <p>Media</p>
+          <p><?=$skills['skill_name'][3]?></p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+          <div class="w3-container w3-center w3-round-xlarge w3-teal" style="..."><?=$skills['level'][3]?>%</div>
           </div>
           <br>
 
